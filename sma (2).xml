@@ -1,0 +1,231 @@
+<xml xmlns="http://www.w3.org/1999/xhtml" collection="true">
+  <variables>
+    <variable type="" id="CiZ(.:C9[;Hb.5k](#Mv">sma10</variable>
+    <variable type="" id="IoA:+*cu15,`ZerewSvL">s</variable>
+    <variable type="" id="R):hPri,%CS}jts9$H!y">sma05</variable>
+  </variables>
+  <block type="procedures_defreturn" id="+.5G{(!0Rte!ae-`)cak" x="0" y="0">
+    <field name="NAME">loadsma</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="variables_set" id="A%hniR|tG~80G+PiW~13">
+        <field name="VAR" id="CiZ(.:C9[;Hb.5k](#Mv" variabletype="">sma10</field>
+        <value name="VALUE">
+          <block type="sma" id="N6qp/,sn8de}f@E#UW7`">
+            <value name="INPUT">
+              <block type="ohlc_values" id="8IDH?]kxGrX:t:Ta|5]n" disabled="true">
+                <field name="OHLCFIELD_LIST">close</field>
+                <field name="CANDLEINTERVAL_LIST">60</field>
+              </block>
+            </value>
+            <value name="PERIOD">
+              <shadow type="math_number" id="PTe-luFn,NcrTi^Og)Tl">
+                <field name="NUM">10</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="LeItv3cH;ywS:t,ZYVi6">
+            <field name="VAR" id="R):hPri,%CS}jts9$H!y" variabletype="">sma05</field>
+            <value name="VALUE">
+              <block type="sma" id="w+LZhtwJ`^8t`zg+d~MJ">
+                <value name="INPUT">
+                  <block type="ohlc_values" id="nL*!%j,_A_3gp*7z|u^z" disabled="true">
+                    <field name="OHLCFIELD_LIST">close</field>
+                    <field name="CANDLEINTERVAL_LIST">60</field>
+                  </block>
+                </value>
+                <value name="PERIOD">
+                  <shadow type="math_number" id="k6,DYfLsz+%mEdizI1Ji">
+                    <field name="NUM">5</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="controls_if" id="J$X;BSD~fj$]!4RPic]%">
+                <mutation elseif="1"></mutation>
+                <value name="IF0">
+                  <block type="logic_compare" id="zabf:5r$:Ntqs%i]H;}5">
+                    <field name="OP">GT</field>
+                    <value name="A">
+                      <block type="variables_get" id=",0ezN/N]_]ceUZxz+wOt">
+                        <field name="VAR" id="CiZ(.:C9[;Hb.5k](#Mv" variabletype="">sma10</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="variables_get" id="Gs:L=AslzK+PYu})r*.}">
+                        <field name="VAR" id="R):hPri,%CS}jts9$H!y" variabletype="">sma05</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="controls_whileUntil" id="FPB${`r^/e5x1~)QH{k|">
+                    <field name="MODE">WHILE</field>
+                    <value name="BOOL">
+                      <block type="logic_compare" id="tVKssk?XSi_Olx^lB?SV">
+                        <field name="OP">GT</field>
+                        <value name="A">
+                          <block type="variables_get" id="6:-]RWgRi/(omk$F5rWF">
+                            <field name="VAR" id="CiZ(.:C9[;Hb.5k](#Mv" variabletype="">sma10</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="variables_get" id="#.lrGFO^08}1.U3)w5M:">
+                            <field name="VAR" id="R):hPri,%CS}jts9$H!y" variabletype="">sma05</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO">
+                      <block type="variables_set" id="KQ~Z^x#]PZc1jQo+0[{q">
+                        <field name="VAR" id="CiZ(.:C9[;Hb.5k](#Mv" variabletype="">sma10</field>
+                        <value name="VALUE">
+                          <block type="sma" id="CT5#MDx8e9Ho2FXRQ[6l">
+                            <value name="INPUT">
+                              <block type="ohlc_values" id="Yjjac25^pbfFpm#M}^w!" disabled="true">
+                                <field name="OHLCFIELD_LIST">close</field>
+                                <field name="CANDLEINTERVAL_LIST">60</field>
+                              </block>
+                            </value>
+                            <value name="PERIOD">
+                              <shadow type="math_number" id="J{5]zIziM@/)0vh-khA.">
+                                <field name="NUM">10</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="variables_set" id="qTZR@iI+O`$s@iXK7j/l">
+                            <field name="VAR" id="R):hPri,%CS}jts9$H!y" variabletype="">sma05</field>
+                            <value name="VALUE">
+                              <block type="sma" id="W)oENh7JLxgo=Y[d~Nm=">
+                                <value name="INPUT">
+                                  <block type="ohlc_values" id="FCVxL*)_=p,haPJ2=G,g" disabled="true">
+                                    <field name="OHLCFIELD_LIST">close</field>
+                                    <field name="CANDLEINTERVAL_LIST">60</field>
+                                  </block>
+                                </value>
+                                <value name="PERIOD">
+                                  <shadow type="math_number" id="iFFtS3yP.~%r,i)HL1vR">
+                                    <field name="NUM">5</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="variables_set" id="+@eY2-JbdQT`hcagHH?.">
+                        <field name="VAR" id="IoA:+*cu15,`ZerewSvL" variabletype="">s</field>
+                        <value name="VALUE">
+                          <block type="math_number" id="a`izz3yDibLxuFip(FD#">
+                            <field name="NUM">1</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <value name="IF1">
+                  <block type="logic_compare" id="qwa/B4?={PdezSp}F72w">
+                    <field name="OP">LT</field>
+                    <value name="A">
+                      <block type="variables_get" id="5rwkQ2qOpK_$,Z9a5-)i">
+                        <field name="VAR" id="CiZ(.:C9[;Hb.5k](#Mv" variabletype="">sma10</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="variables_get" id="3j?o6@~+mWFoP$p-J!TO">
+                        <field name="VAR" id="R):hPri,%CS}jts9$H!y" variabletype="">sma05</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO1">
+                  <block type="controls_whileUntil" id=")3HX8Eud?1-9%t6q31TV">
+                    <field name="MODE">WHILE</field>
+                    <value name="BOOL">
+                      <block type="logic_compare" id="!DOPiVt:{)2find,RG1G">
+                        <field name="OP">LT</field>
+                        <value name="A">
+                          <block type="variables_get" id="0F,SEER$~TpfM+nIc|C%">
+                            <field name="VAR" id="CiZ(.:C9[;Hb.5k](#Mv" variabletype="">sma10</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="variables_get" id="eQiuPOThv8*Kf;CKOSM?">
+                            <field name="VAR" id="R):hPri,%CS}jts9$H!y" variabletype="">sma05</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO">
+                      <block type="variables_set" id="gLnnQC]s([?6r,gja^9Y">
+                        <field name="VAR" id="CiZ(.:C9[;Hb.5k](#Mv" variabletype="">sma10</field>
+                        <value name="VALUE">
+                          <block type="sma" id="Y5hMxfyM!s1_TmUklJ9V">
+                            <value name="INPUT">
+                              <block type="ohlc_values" id="[^1#maCP}s!-0~PQ8c19" disabled="true">
+                                <field name="OHLCFIELD_LIST">close</field>
+                                <field name="CANDLEINTERVAL_LIST">60</field>
+                              </block>
+                            </value>
+                            <value name="PERIOD">
+                              <shadow type="math_number" id="_yiA)Xj^*sQ=!^6kZMjs">
+                                <field name="NUM">10</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="variables_set" id="3Mg7EsS;}^wciv7)+fz_">
+                            <field name="VAR" id="R):hPri,%CS}jts9$H!y" variabletype="">sma05</field>
+                            <value name="VALUE">
+                              <block type="sma" id="EDSQcw*gAn[era.KTkco">
+                                <value name="INPUT">
+                                  <block type="ohlc_values" id="ZB?[kIh/uk)cR!5I:4ye" disabled="true">
+                                    <field name="OHLCFIELD_LIST">close</field>
+                                    <field name="CANDLEINTERVAL_LIST">60</field>
+                                  </block>
+                                </value>
+                                <value name="PERIOD">
+                                  <shadow type="math_number" id="{U[LEczIwa{yDdsvrGna">
+                                    <field name="NUM">5</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="variables_set" id="|N^jTKwUmk~ui$GP1b#C">
+                        <field name="VAR" id="IoA:+*cu15,`ZerewSvL" variabletype="">s</field>
+                        <value name="VALUE">
+                          <block type="math_number" id="p=b.nvZ3V#o_mFzIL`4Y">
+                            <field name="NUM">2</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="RETURN">
+      <block type="variables_get" id="!]u]btZDFLdx27^LyF|g">
+        <field name="VAR" id="IoA:+*cu15,`ZerewSvL" variabletype="">s</field>
+      </block>
+    </value>
+  </block>
+</xml>
